@@ -1,5 +1,5 @@
 ---
-title: "20YearsOfGames"
+title: "20 Years Of Games"
 output:
   html_notebook: default
   html_document: default
@@ -11,7 +11,7 @@ install.lib <- load.libraries[!load.libraries %in% installed.packages()]
 for(libs in install.lib) install.packages(libs, dependences = TRUE)
 sapply(load.libraries, require, character = TRUE)
 
-df <- read_csv("./data/20-years-of-games.csv", 
+df <- read_csv("../data/20-years-of-games.csv", 
                                col_types = cols(url = col_skip(),
                                                 release_month = col_integer(),
                                                 score = col_number()))
@@ -53,6 +53,7 @@ ggplot(df_plot, aes(x=release_year, y = csum, colour = platform)) +
   theme(legend.position = "bottom")
 
 ```
+
 ## Predictive analysis
 The aim of the predictive analysis is to calculate the likelihood that a game made was an editor's choice. This is a classification type problem, and there are two popular methods to resolve this
 
@@ -78,7 +79,7 @@ It appears there's a relationship between the editor's choice an the score recei
 t1 <- confusionMatrix(predictions, testing$editors_choice)
 print(t1)
 ```
-###using Support vector machine
+### Support vector machine
 ```{r include=FALSE, cache=FALSE}
 mod_fit2 <- train(editors_choice ~ platform + genre + score_phrase + score, data = training, method = "svmLinearWeights", na.action = na.exclude)
 predictions2 = predict(mod_fit2,newdata = testing)
