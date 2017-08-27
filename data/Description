@@ -1,0 +1,16 @@
+20	Years	of	Games	–	A	data	set	taken	from	IGN	of	18,000+	game	reviews	
+over	20	years.	
+
+The	Data	–	20	Years	of	Games	
+
+* score_phrase	–	A	descriptive	phrase	relating	to	the	review	score	
+* title	–	Game	title	
+* url	–	The	original	URL	on	the	IGN	website	
+* platform	–	The	gaming	platform	the	release	was	on	
+* score	–	The	review	score	
+* genre	–	Type	of	game,	e.g.	Platformer,	Fighting	etc.	
+* editors_choice	–	Y/N	flag	describing	if	the	game	was	made	an	editor’s	
+* choice	on	the	site	
+* release_year	–	Year	the	game	was	released	
+* release_month	–	Month	the	game	was	released	
+* release_day	–	Day	of	the	month	the	game	was	released	
