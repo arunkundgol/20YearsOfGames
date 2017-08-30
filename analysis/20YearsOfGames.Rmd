@@ -8,7 +8,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 load.libraries <- c('readr','caret','ggplot2','dplyr','e1071')
 install.lib <- load.libraries[!load.libraries %in% installed.packages()]
-for(libs in install.lib) install.packages(libs, dependences = TRUE)
+for(libs in install.lib) install.packages(libs, dependencies = TRUE)
 sapply(load.libraries, require, character = TRUE)
 
 df <- read_csv("../data/20-years-of-games.csv", 
